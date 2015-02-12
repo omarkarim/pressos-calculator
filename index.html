@@ -1,0 +1,65 @@
+<html>
+
+<head>
+
+  <title>PressOS Calculator</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
+
+  <script type="text/javascript">
+
+    function addNumbers() {
+      document.calculator.answer.value = getNumberA() + getNumberB()
+    }
+
+    function getNumberA() {
+      return parseInt(document.calculator.numberA.value, 10)
+    }
+
+    function getNumberB() {
+      return parseInt(document.calculator.numberB.value, 10)
+    }
+
+  </script>
+
+</head>
+
+<body class="container">
+
+  <div class="jumbotron" style="color: white; background-color: #6f5499">
+    <h1>PressOS Calculator</h1>
+    <p style="color: #cdbfe3;">Open source calculator for Social Media: The Power to Speak Truth</p>
+  </div>
+
+  <form name="calculator" class="form-horizontal">
+
+    <div class="input-group input-group-lg">
+      <span class="input-group-addon input-label">Number A</span>
+      <input name="numberA" type="number" placeholder="e.g. 23" class="form-control" />
+    </div>
+
+    <br>
+
+    <div class="input-group input-group-lg">
+      <span class="input-group-addon input-label">Number B</span>
+      <input name="numberB" type="number" placeholder="e.g. 19" class="form-control" />
+    </div>
+
+    <br>
+
+    <div class="btn-toolbar">      
+      <button onclick="addNumbers()" type="button" class="btn btn-success btn-lg pull-right">Add Numbers</button>
+    </div>
+
+    <br>
+
+    <div class="input-group input-group-lg">
+      <span class="input-group-addon input-label">Answer is</span>
+      <input type="number" name="answer" class="form-control" readonly />
+    </div>
+
+  </form>
+
+</body>
+
+</html>
