@@ -11,6 +11,10 @@
     function addNumbers() {
       document.calculator.answer.value = getNumberA() + getNumberB()
     }
+    
+    function subtractNumbers() {
+      document.calculator.answer.value = getNumberA() - getNumberB()
+    }
 
     function getNumberA() {
       return parseInt(document.calculator.numberA.value, 10)
@@ -47,7 +51,8 @@
 
     <br>
 
-    <div class="btn-toolbar">      
+    <div class="btn-toolbar">
+      <button onclick="subtractNumbers()" type="button" class="btn btn-success btn-lg pull-right">Subtract Numbers</button>
       <button onclick="addNumbers()" type="button" class="btn btn-success btn-lg pull-right">Add Numbers</button>
     </div>
 
